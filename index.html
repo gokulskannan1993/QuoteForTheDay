@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote for the Day</title>
+
+    <!-- trick to change favicons on the go -->
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=mail.google.com">
+
+    <!-- font from fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quote-container" id="quote-container">
+
+
+        <!-- Quote element -->
+        <div class="quote-text">
+            <!-- quotation mark left -->
+            <i class="fas fa-quote-left"></i>
+            <!-- actual quote -->
+            <span id="quote"></span>
+            <!-- quotation mark right -->
+            <i class="fas fa-quote-right"></i>
+        </div>
+
+        <!-- Author element -->
+        <div class="quote-author">
+            <span id="author"></span>
+        </div>
+
+        <!-- Buttons for refresh and twitter -->
+        <div class="button-container">
+
+            <!-- twitter share button -->
+            <button class="twitter-button" id="twitter" title="Tweet">
+                <i class="fab fa-twitter"></i>
+            </button>
+
+            <!-- quote refresh button -->
+            <button class="quote-refresh" id="refresh">New Quote</button>
+
+        </div>
+
+    </div>
+    
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
