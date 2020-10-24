@@ -2,11 +2,30 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-const twitterBtn = document.getElementById('twitter');
 const refreshBtn = document.getElementById('refresh');
+const loader = document.getElementById('loader');
+
+
+// to show loading
+function showLoadingSpinner(){
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+
+//to hide loading
+function hideLoadingSpinner(){
+    if(!loader.hidden){
+        quoteContainer.hidden = false;
+        loader.hidden = true;
+    }
+}
 
 // Fetching quote from api
 async function getQuote(){
+
+    // show loader
+    showLoadingSpinner();
 
     //custom proxy url to avoid error
     const proxyUrl = 'https://mighty-ridge-16563.herokuapp.com/';
@@ -35,6 +54,9 @@ async function getQuote(){
 
 
         quoteText.innerText = data.quoteText;
+
+        //stop loader and show quote
+        hideLoadingSpinner();
 
     }catch(error){
         getQuote();

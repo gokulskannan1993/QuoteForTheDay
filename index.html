@@ -34,18 +34,19 @@
         <!-- Buttons for refresh and twitter -->
         <div class="button-container">
 
-            <!-- twitter share button -->
-            <button class="twitter-button" id="twitter" title="Tweet">
-                <i class="fab fa-twitter"></i>
-            </button>
-
             <!-- quote refresh button -->
-            <button class="quote-refresh" id="refresh">New Quote</button>
+            <form action="index.html">
+                <button class="quote-refresh" id="refresh" type="submit">New Quote</button>
+            </form>
+
 
         </div>
 
     </div>
-    
+
+    <!-- Loader part -->
+    <div class="loader" id="loader"></div>
+
     <!-- Script -->
     <script src="script.js"></script>
 </body>
